@@ -1,0 +1,151 @@
+/* *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+@media only screen and (min-width: 1025px) {
+    body {
+      font-size: 20px;
+    }
+  }
+.container{
+    width: 1535px;
+    height: 738px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.container img{
+    position:absolute;
+    width: 100%;
+    height: 100%
+}
+.log-in{
+    /* background-color: white; */
+    backdrop-filter: blur(35px);
+     height: 600px;
+    width: 400px;
+    border-radius: 20px;
+    position: relative;
+    /* background: rgba(0,0,0,0.8); */
+
+    
+    
+
+}
+h1{
+    display: flex;
+    justify-content: center;
+    font-family:'Times New Roman', Times, serif;
+    margin-top: 120px;
+    color: whitesmoke;
+
+    letter-spacing: 2px;
+    margin-right: 40px;
+    
+    
+}
+
+
+.user-name{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+    font-weight: bolder;
+    font-size: large;
+    margin-top: 20px;
+    
+    
+}
+.cls{
+    border: none;
+    margin-left: 10px;
+    background: transparent;
+    margin-bottom: 20px;
+}
+.cls:focus{
+    outline: none;
+    border-bottom-color: hsl(110, 89%, 7%);
+    border-bottom: 2px;
+    
+}
+
+i{
+    margin-left: 30px;
+}
+.user{
+    margin-bottom: 14px;
+}
+.person{
+    display: flex; 
+    margin-top: 50px;
+    
+}
+.person span{
+    margin-left: 30px;
+    margin-right: 20px;
+    color: beige;
+}
+.person input{
+    color: white;
+    border: none;
+    border-bottom: 1px  solid white;
+    background: transparent; 
+    margin-left: 5px;
+    letter-spacing:3px;
+    width: 200px;
+    
+    
+}
+.person ::placeholder{
+    color: whitesmoke;
+    font-size: smaller;
+}
+
+
+.password{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 14px;
+    font-weight: bolder;
+    font-size: large;
+}
+.arrow{
+
+    height: 20px;
+    border-radius: 4px;
+    display: flex;
+    justify-content:end;
+    
+
+}
+
+.all{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    margin-top: 40px;
+    color: whitesmoke;
+    letter-spacing:1.5px;
+    line-height:0.8rem;
+}
+
+.all a{
+    text-decoration: none;
+    /* color:greenyellow; */
+    color:mediumaquamarine;
+    font-size:10px;
+    display: flex;
+    justify-content: center;
+    align-items:start;
+    font-weight: bolder;
+
+}
+.paragraph{
+    font-size:13.5px;
+    margin-bottom: 80px;
+    
+} 

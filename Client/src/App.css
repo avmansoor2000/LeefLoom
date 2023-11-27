@@ -1,0 +1,96 @@
+:root{
+    --primary-color: #6f55f2;
+    --heading-color:#132742;
+  }
+  a{
+    text-decoration: none;
+    color: unset;
+  }
+  
+  a:hover{
+    color: unset;
+  }
+  link{
+    text-decoration: none;
+    color: unset;
+  }
+  
+  link:hover{
+    color: unset;
+  }
+  
+  ul{
+    list-style: none;
+  }
+  .container{
+    width: 1140px;
+    padding: 0px 15px;
+    margin: auto;
+  }
+  
+  .section_title{
+    color: var(--heading-color);
+    font-weight: 700;
+  }
+  .nav-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo{
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+  }
+  .logo-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    line-height: 40px;
+    padding: 10px;
+  }
+  .logo-img img{
+    width: 6rem;
+  }
+  .menu{
+    display: flex;
+    align-items: center;
+    column-gap: 2.7rem;
+  }
+  
+  .nav-item{
+    cursor: pointer;
+    color: var(--heading-color);
+    font-weight: 600 !important;
+    transition: 0.3s;
+  }
+  
+  .nav-item:hover{
+    color: var(--primary-color);
+  }
+  
+  .register-btn{
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-family: var(font-family);
+    font-style: 1rem;
+    font-weight: 700;
+    outline: none;
+    padding: 7px 15px;
+  }
+
+
+  body{
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  section{
+    padding: 50px 0px;
+  }
+  

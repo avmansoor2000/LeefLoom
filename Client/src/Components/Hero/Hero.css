@@ -1,0 +1,61 @@
+
+.hero {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px;
+    background-color: #f8f9fa;
+    color: #343a40;
+  }
+  
+  .hero-left {
+    max-width: 600px;
+  }
+  
+  .hero-left h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero-left p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  
+  .hero-latest-btn {
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .hero-latest-btn:hover {
+    background-color: #218838;
+  }
+  
+  .hero-latest-btn div {
+    margin-right: 10px;
+  }
+  
+  .hero-latest-btn i {
+    font-size: 1.2rem;
+  }
+  
+  .hero-right {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .hero-right img {
+    width: 100%;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(40, 40, 40, 40);
+  }
+  
+  

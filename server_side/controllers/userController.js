@@ -5,6 +5,7 @@ const {Order} = require('../models/orderSchema')
 // const {auth,revokedTokens} = require('../middleware/auth')
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
+const mongoose = require('mongoose')
 require('dotenv').config();
 
 
@@ -109,8 +110,8 @@ const userRegister = async(req,res)=>{
 
 const productList = async(req,res)=>{
     try{
-    const products = await Product.find({ deleted: false });
-    res.json(products);
+    const product = await Product.find({ deleted: false });
+    res.json(product);
 }catch(error){
     console.error('Error fetching product list:', error);
     res.status(500).json({error: "Error fetching product list" })
@@ -161,12 +162,12 @@ const getCart = async (req,res) => {
 const addToCart = async(req,res) =>{
     try {
         // const userId = req.user._id;
-        // const { productId, quantity } = req.body;
+        const { productId, quantity,userId,price } = req.body;
         // const userId = "6553ef50262e4da04c38d3ef";
-        const userId = "6553ee850dc5a135761c7042";
-        const productId = "654ab7a8289b15711c4bb5da ";
-        const quantity = 1;
-        const price = 100;
+        // const userId = "6553ee850dc5a135761c7042";
+        // const productId = "654ab7a8289b15711c4bb5da ";
+        // const quantity = 1;
+        // const price = 100;
     
         // Find the user's cart or create a new cart if it doesn't exist
         let cart = await Cart.findOne({user : userId})
@@ -186,8 +187,8 @@ const addToCart = async(req,res) =>{
             
         }else{
             // If the product is not in the cart, add it 
-           await cart.cartItems.push({
-                productId,
+            cart.cartItems.push({
+                productId: new mongoose.Types.ObjectId(productId),
                 quantity,
                 price
             })
@@ -218,24 +219,34 @@ const getCheckout = (req,res) =>{
 
 //  PLACED ORDER
 
-// const postOrder = async(req,res) =>{
-//     try{
-//     const userId = "6553ee850dc5a135761c7042";
-//     const productId = "654d3360f182ec13ccec9cd9";
+const postOrder = async(req,res) =>{
+    try{
+       const {userId,productId,paymentMethod,quantity} = req.body
 
-//     const order = new Order ({
-//         user : userId,
-//         productId
-//     });
-//     await order.save()
+    let order = await Order.findOne({user : userId })?. exec() ?? null ;
 
+    if(!order){
+        const order = new Order ({
+            user : userId,
+            orders:[]
+        });
+
+        await order.save()
+
+    }
+
+     order.orders.push({
+        productId,
+        paymentMethod,
+        quantity
+    })
+    await order.save()
     
-    
-//     res.status(200).json("Successs")
-// }catch(error){
-//     res.status(500).json("error")
-// }
-// }
+    res.status(200).json("Successs")
+}catch(error){
+    res.status(500).json("error")
+}
+}
 
 
 

@@ -13,23 +13,22 @@ router.post('/userRegister',userRegister)
 // router.post('/logout',auth,logout)
 
 // GET SHOP PAGE
-router.get('/product-list',auth,productList)
+router.get('/product-list',productList)
 
 // GET PRODUCT VIEW
-router.get('/product-view/:productId',auth,productView)
+router.get('/product-view/:productId',productView)
 
 //  GET USER'S CART 
-router.get('/cart',auth,getCart)
+router.get('/cart',getCart)
 
 //  POST ADD ITEM TO CART
 router.post('/addToCart',addToCart);
 
 //  GET CHECKOUT
-router.get('/checkout',auth,getCheckout)
+router.get('/checkout',getCheckout)
 
 // POST ORDER
-// router.post('/placed_Order',postOrder)
-
+router.post('/placed_Order',postOrder)
 
 
 

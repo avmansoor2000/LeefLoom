@@ -8,8 +8,9 @@ const orederSchema = new Schema({
 
     orders: [
         {
-            productId: {type: Schema.Types.ObjectId, ref : "order"},
-            paymentMethod: {type: String}
+            productId: {type: Schema.Types.ObjectId, ref : "product"},
+            paymentMethod: {type: String},
+            quantity: {type: Number}
         }
     ]
 })
